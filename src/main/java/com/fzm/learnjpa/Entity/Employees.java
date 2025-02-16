@@ -14,15 +14,14 @@ import lombok.Setter;
 public class Employees {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Use if auto-increment in DB
-    @Column(name = "employeeNumber")
-    private Integer employeeNumber;
+    @Column(name = "employee_number")
+    private Integer employee_number;
 
-    @Column(name = "lastName", nullable = false)
-    private String lastName;
+    @Column(name = "last_name", nullable = false)
+    private String last_name;
 
-    @Column(name = "firstName", nullable = false)
-    private String firstName;
+    @Column(name = "first_name", nullable = false)
+    private String first_name;
 
     @Column(name = "extension")
     private String extension;
@@ -30,23 +29,23 @@ public class Employees {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "officeCode")
-    private String officeCode;
+    @Column(name = "office_code")
+    private String office_code;
 
-    @Column(name = "reportsTo")
-    private Integer reportsTo;
+    @Column(name = "reports_to")
+    private Integer reports_to;
 
-    @Column(name = "jobTitle")
-    private String jobTitle;
+    @Column(name = "job_title")
+    private String job_title;
 
-    public Employees(Integer employeeNumber, String lastName, String firstName, String extension, String email, String officeCode, Integer reportsTo, String jobTitle) {
-        this.employeeNumber = employeeNumber;
-        this.lastName = lastName;
-        this.firstName = firstName;
+    public Employees(Integer employeeNumber, String last_name, String first_name, String extension, String email, String office_code, Integer reports_to, String job_title) {
+        this.employee_number = employeeNumber;
+        this.last_name = last_name;
+        this.first_name = first_name;
         this.extension = extension;
         this.email = email;
-        this.officeCode = officeCode;
-        this.reportsTo = reportsTo;
-        this.jobTitle = jobTitle;
+        this.office_code = office_code;
+        this.reports_to = reports_to;
+        this.job_title = job_title;
     }
 }
