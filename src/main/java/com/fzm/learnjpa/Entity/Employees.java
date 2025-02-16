@@ -1,6 +1,7 @@
 package com.fzm.learnjpa.Entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,20 +14,20 @@ import lombok.Setter;
 public class Employees {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Use if auto-increment in DB
     @Column(name = "employeeNumber")
     private Integer employeeNumber;
 
-
-    @Column(name = "lastName")
+    @Column(name = "lastName", nullable = false)
     private String lastName;
 
-    @Column(name = "firstName")
+    @Column(name = "firstName", nullable = false)
     private String firstName;
 
     @Column(name = "extension")
     private String extension;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
     @Column(name = "officeCode")

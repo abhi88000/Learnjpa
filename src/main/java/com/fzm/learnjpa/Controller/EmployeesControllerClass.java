@@ -21,10 +21,4 @@ public class EmployeesControllerClass {
     public List<Employees> getAllEmployees() {
         return service.getAllEmployees();
     }
-
-    // Get employee by ID
-    @GetMapping("/{id}")
-    public Employees getEmployeeById(@PathVariable Integer id) {
-        return service.getEmployeeById(id).orElse(null);
-    }
 }

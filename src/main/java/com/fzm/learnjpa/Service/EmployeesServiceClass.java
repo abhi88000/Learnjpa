@@ -16,13 +16,8 @@ public class EmployeesServiceClass {
         this.repository = repository;
     }
 
-    // Get all employees
     public List<Employees> getAllEmployees() {
         return repository.findAll();
     }
 
-    // Get employee by ID
-    public Optional<Employees> getEmployeeById(Integer id) {
-        return repository.findById(id);
-    }
 }
